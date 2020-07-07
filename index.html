@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Exercise 1</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="application-root"></div>
+    <script
+    src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+  </script>
+    <script type="text/babel">
+    const appRoot = document.querySelector('#application-root')
+    function App(props) {
+        console.log(props)
+        return (
+        <main>
+            {props.children}
+        </main>
+        );
+    }
+    ReactDOM.render(
+        <App>
+            <header>
+                <h1>Sally Student</h1>
+                <h2>Phone: 123-456-7890</h2>
+                <h2>Email: sallyStudent@email.com</h2>
+                <address>42 Wallaby Way, Syndey Australia</address>
+                <img src='https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg'></img>
+            </header>
+            <section class="education">
+                <h2>Education</h2>
+                <p>Amazing University, Class of 2020</p>
+                <p>Best Academy, Class of 2016</p>
+            </section>
+            <section class="employment">
+                <h2>Employment</h2>
+                <div class="job">
+                    <div>The Pokemon Company</div>
+                    <div>Pokemon Trainer</div>
+                    <div>2011-2015</div>
+                </div>
+                <div class="description">
+                    <p>A Pokémon Trainer is a person who catches, trains, cares for, and battles with Pokémon. The majority of people within the known Pokémon world are Trainers. Pokémon Trainer is a broad term for any person who owns Pokémon, including Coordinators and Breeders.</p>
+                </div>
+                <div class="job">
+                    <div>Willy Wonka Factory</div>
+                    <div>Oompa Loompa</div>
+                    <div>2015-2019</div>
+                </div>
+                <div class="description">
+                    <p>Any of the fictional dwarves who manufacture candy and sarcastically dispense songs of advice in Roald Dahl's Charlie and the Chocolate Factory.</p>
+                </div>
+            </section>
+        </App>,
+    appRoot)
+    </script>
+</body>
+</html>
